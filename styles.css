@@ -175,3 +175,11 @@ select option::checkmark {
 .box5 {
 	background-color: #FC1616;
 }
+
+/* MEDIA QUERY */
+
+@media (max-width: 400px) {
+	:root{
+		font-size: 0.8rem;
+	}
+}
