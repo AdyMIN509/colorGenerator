@@ -1,1 +1,173 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+}
+
+:root {
+	--bg-primary-color: #FFFFFF;
+	--btn-primary-color: #FFFFFF;
+	--btn-bg:#FFFFFF;
+	--color-val-color: #2B283A;
+	--text-color: #111827;
+	--border-radius: 3px;
+	--border-color: #D1D5DB;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100dvh;
+	width: 100%;
+	background-color: #1C1C1C;
+}
+
+main {
+	background-color: var(--bg-primary-color);
+	height: 90%;
+	width: 90%;
+	max-width: 550px;
+	display: flex;
+	flex-direction: column;
+	max-height: 550px;
+}
+
+form {
+	display: flex;
+	padding: 0.5em 1em;
+	gap: 0.5em;
+	justify-content: space-between;
+	align-items: center;
+}
+
+input[type='color'] {
+	height: 40px;
+	border: 0;
+	cursor: pointer;
+}
+
+select {
+	appearance: base-select;
+	flex: 1 1 auto;
+	padding: 0.5em 1em;
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+	color: var(--text-color);
+	background-color: transparent;
+	cursor: pointer;
+}
+
+::picker(select) {
+	appearance: base-select;
+	background-color: var(--bg-primary-color);
+	margin-top: 5px;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--border-color);
+}
+
+option {
+	padding: 0.5em 1em;
+	width: 100%;
+	height: 100%;
+	transition: 0.3s;
+}
+
+option:checked, option:hover {
+	background-color: #D1D5DB;
+}
+
+option:checked {
+	font-weight: bold;
+}
+
+select::picker-icon {
+	color: var(--border-color);
+	transition: .3s;
+}
+
+select:open::picker-icon {
+	transform: rotate(180deg);
+}
+
+select option::checkmark {
+	display: none;
+}
+
+.submit-btn {
+	padding: 0.5em 1em;
+	line-height: 1.25rem;
+	background-color: var(--btn-bg);
+	border-radius: var(--border-radius);
+	border: 1px solid var(--border-color);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+	background-color: var(--border-color);
+}
+
+.submit-btn:active {
+	color: white;
+}
+
+.color-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.color {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.color:hover {
+	z-index: 1;
+	transform: scale(1.05) translateY(10px);
+	box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.color-box {
+	height: 100%;
+	width: 100%;
+}
+
+.color-value{
+	padding: 1em;
+	font-size: 0.75rem;
+	width: 100%;
+	text-align: center;
+	color: var(--color-val-color);
+	background-color: var(--bg-primary-color);
+}
+
+/* #12D10E
+#100CE0
+#EF0909
+#F90D0D
+#FC1616 */
+/* First rendering */
+.box1 {
+	background-color: #12D10E;
+}
+.box2 {
+	background-color: #100CE0;
+}
+.box3 {
+	background-color: #EF0909;
+}
+.box4 {
+	background-color: #F90D0D;
+}
+.box5 {
+	background-color: #FC1616;
+}

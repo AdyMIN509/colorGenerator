@@ -1,1 +1,50 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Color Generator | Christian Mbolanantenaina</title>
+</head>
+<body>
+	<main>
+		<form id="form">
+			<input type="color" value='#12D10E'name="color" aria-label="color picker">
+			<select name="mode" id="color-type" aria-label="color type select">
+				<option value="triad">Triad</option>
+				<option value="monochrome">Monochrome</option>
+				<option value="monochrome-dark">Monochrome-dark</option>
+				<option value="monochrome-light">Monochrome-light</option>
+				<option value="analogic">Analogic</option>
+				<option value="analogic-complement">Analogic-complement</option>
+				<option value="complement">Complement</option>
+			</select>
+			<button type="submit" class="submit-btn" id="submit-btn">Get color scheme</button>
+		</form>
+		<div id="color-container" class="color-container">
+			<!-- Color will be inserted here -->
+			 <div class="color">
+				<div data-color='#12D10E'class="color-box box1"></div>
+				<p data-color='#12D10E' class="color-value">#12D10E</p>
+			 </div>
+			 <div class="color">
+				<div data-color='#100CE0' class="color-box box2"></div>
+				<p data-color='#100CE0' class="color-value">#100CE0</p>
+			 </div>
+			 <div class="color">
+				<div data-color='#EF0909' class="color-box box3"></div>
+				<p data-color='#EF0909' class="color-value">#EF0909</p>
+			 </div>
+			 <div class="color">
+				<div data-color='#F90D0D' class="color-box box4"></div>
+				<p data-color='#F90D0D' class="color-value">#F90D0D</p>
+			 </div>
+			 <div class="color">
+				<div data-color='#FC1616' class="color-box box5"></div>
+				<p data-color='#FC1616' class="color-value">#FC1616</p>
+			 </div>
+		</div>
+	</main>
+	<script src="index.js" type="module"></script>
+</body>
+</html>
